@@ -1,0 +1,102 @@
+ .name {
+     position: absolute;
+     top: 55%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+
+     width: 50%;
+ }
+
+
+
+path {
+     stroke: #fff;
+     fill: none;
+     stroke-dasharray: 1000;
+     opacity: 10;
+
+
+     animation: animate_name 3s cubic-bezier(0, 0.23, 1, .1);
+
+ }
+
+ @keyframes animate_name {
+     0% {
+         opacity: 0%;
+         fill: none;
+         stroke-dashoffset: 1000;
+     }
+
+     30% {
+         opacity: 10%;
+         fill: none;
+         stroke-dashoffset: 1000;
+
+     }
+
+     90% {
+         fill: rgba(255, 255, 255, 0);
+
+     }
+
+     100% {
+         opacity: 10%;
+         fill: rgba(255, 255, 255, 1);
+         stroke-dashoffset: 0;
+
+     }
+ }
+.line {
+     position: absolute;
+     top: 65%;
+     left: 50%;
+     width: 16em;
+     margin: 0 auto;
+     border-right: 2px solid rgba(255, 255, 255, 0.75);
+     font-size: 2vw;
+
+     text-align: center;
+     overflow: hidden;
+     white-space: nowrap;
+     transform: translateY(-50%, -50%);
+     z-index: 10;
+ }
+
+ .anim-type {
+     animation: type 3s steps(40) 1s 1 normal both,
+
+         blinkTextCursor 500ms steps(40) infinite normal;
+     animation-delay: 3s;
+
+ }
+
+ @keyframes type {
+     from {
+         width: 0em;
+     }
+
+     to {
+         width: 16em;
+     }
+ }
+
+ @keyframes blinkTextCursor {
+     from {
+         border-right-color: rgba(255, 255, 255, 0.75);
+
+     }
+
+     to {
+         border-right-color: transparent;
+     }
+ }
+.preloader .zoomInUp{
+    margin: 0;
+    border: 0;
+    display: inline-block;
+    color: white;
+    font-family:sans-serif;
+    font-size: 140%;
+    animation: zoomInUp 2s infinite;
+    
+}
